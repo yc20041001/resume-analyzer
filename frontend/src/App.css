@@ -1,0 +1,373 @@
+/* ====================================================
+   AI Resume Analyzer — Styles
+   ==================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Main */
+.app-main {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Upload */
+.upload-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.upload-area button {
+  padding: 0.6rem 1.2rem;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.upload-area button:hover {
+  background: #5a6fd6;
+}
+
+.file-name {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* Submit */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Error */
+.error-box {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #b91c1c;
+  margin-bottom: 1rem;
+}
+
+/* Resume fields */
+.field {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.field-label {
+  min-width: 6em;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.field-value {
+  color: #333;
+}
+
+.resume-section {
+  margin-top: 0.75rem;
+}
+
+.sub-item {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.sub-item p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+.tech-stack {
+  font-size: 0.85rem;
+  color: #667eea;
+  margin-top: 0.25rem;
+}
+
+.highlight {
+  font-size: 0.85rem;
+  color: #764ba2;
+  margin-top: 0.25rem;
+}
+
+/* Score */
+.score-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.score-ring {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-unit {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.score-level {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.score-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.score-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.score-detail-item span {
+  color: #666;
+}
+
+.score-detail-item strong {
+  color: #333;
+}
+
+/* Keywords */
+.keyword-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.keyword-group h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4rem;
+}
+
+.keyword-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.tag-hit {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.tag-miss {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tag-job {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.job-summary {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.empty-hint {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+/* Comment */
+.comment-box {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.comment-box p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Raw text */
+.raw-text-card summary {
+  cursor: pointer;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.raw-text-card pre {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: #f4f4f5;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  max-height: 300px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .field {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .field-label {
+    min-width: auto;
+  }
+}
